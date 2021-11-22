@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In order to run this application you will need to first git clone the repository onto your machine:
 
-Things you may want to cover:
+`git clone git@github.com:george-bit/weather-app.git`
 
-* Ruby version
+You will then need to make sure you have the following dependencies installed via Homebrew
 
-* System dependencies
+`brew install`
 
-* Configuration
+- postgresql
+- ruby
+- yarn
+- webpacker
+- bundler
 
-* Database creation
+Before running you will first need to create a database and migrate it
 
-* Database initialization
+`rails db:create`
+`rails db:migrate`
 
-* How to run the test suite
+You will then need to run
 
-* Services (job queues, cache servers, search engines, etc.)
+`bundle exec rails server`
 
-* Deployment instructions
-
-* ...
+You can then visit http://localhost:3000/
