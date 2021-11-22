@@ -1,3 +1,10 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'weather#index'
+
+  get '/forecast' => 'weather#forecast'
+
+  get '/set-temperatures' => 'set_temperatures#index', as: :set_temperatures
+  put '/set-temperatures' => 'set_temperatures#update'
 end
